@@ -37,7 +37,7 @@ public class BootStrapData implements CommandLineRunner {
 
         customerRepository.save(customer3);
 
-        System.out.println("Count of customers"+customerRepository.count());
+        System.out.println("Count of customers - "+customerRepository.count());
 
 
 
