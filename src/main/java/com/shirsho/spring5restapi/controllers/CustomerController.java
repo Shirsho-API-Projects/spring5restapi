@@ -35,4 +35,16 @@ public class CustomerController {
     public Customer saveCustomer(@RequestBody Customer customer) {
         return customerService.saveCustomer(customer);
     }
+
+    @PutMapping("/{Id}")
+    @ResponseStatus(HttpStatus.OK)
+    public Customer updateCustomer(@RequestBody Customer customer, @PathVariable Long Id) {
+        return customerService.updateCustomer(customer,Id);
+    }
+
+    @DeleteMapping("/{Id}")
+    @ResponseStatus(HttpStatus.OK)
+    void deleteCustomer(@PathVariable Long Id) {
+        customerService.deleteCustomer(Id);
+    }
 }
